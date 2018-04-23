@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    img {
+      margin: 10px;
+      width: 160px;
+    }
+
+    .img1 {
+      filter: blur(5px)
+    }
+
+    .img2 {
+      filter: brightness(50%)
+    }
+
+    .img3 {
+      filter: contrast(50%)
+    }
+
+    .img4 {
+      filter: drop-shadow(3px 3px 5px 5px red);
+      /* box-shadow: 3px 3px 5px 5px red */
+    }
+
+    .img5 {
+      filter: grayscale(50%)
+    }
+
+    .img6 {
+      filter: hue-rotate(100deg)
+    }
+
+    .img7 {
+      filter: invert(100%)
+    }
+
+    .img8 {
+      filter: opacity(50%)
+    }
+
+    .img9 {
+      filter: saturate(50%)
+    }
+
+    .img10 {
+      filter: sepia(100%)
+    }
+
+    .wrap {
+      float: left;
+      position: relative;
+      margin: 50px auto;
+      width: 400px;
+      height: 300px;
+      background: yellow;
+      filter: contrast(20)
+    }
+
+    .circle1 {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      filter: blur(10px);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #000;
+      animation: left 3s infinite;
+    }
+
+    .circle2 {
+      position: absolute;
+      top: 110px;
+      left: 250px;
+      filter: blur(10px);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: blue;
+      animation: right 3s infinite;
+    }
+
+    @keyframes left {
+      0% {
+        left: 100px;
+      }
+      50% {
+        left: 200px;
+      }
+      100% {
+        left: 100px;
+      }
+    }
+
+    @keyframes right {
+      0% {
+        left: 250px;
+      }
+      50% {
+        left: 100px;
+      }
+      100% {
+        left: 250px;
+      }
+    }
+
+    .fireWrap {
+      float: left;
+      margin-left: 100px;
+      margin-top: 50px;
+      overflow: hidden;
+      width: 200px;
+      height: 300px;
+      background: #000;
+    }
+
+    .fire {
+      position: relative;
+      width: 0;
+      height: 0;
+      border-radius: 45%;
+      box-sizing: border-box;
+      border: 100px solid #000;
+      border-bottom: 100px solid transparent;
+      background-color: #b5932f;
+      transform: scaleX(0.5);
+      filter: blur(20px) contrast(30);
+    }
+
+    .qiu {
+      position: absolute;
+      bottom: -200px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #000;
+    }
+
+    .qiu1 {
+      left: -50px;
+      animation: qiu 1.5s infinite;
+    }
+
+    .qiu2 {
+      left: -30px;
+      animation: qiu 1s infinite;
+
+    }
+
+    .qiu3 {
+      left: -15px;
+      animation: qiu 2.5s infinite;
+
+    }
+
+    .qiu4 {
+      left: -25px;
+      animation: qiu 2s infinite;
+
+    }
+
+    .qiu5 {
+      left: -10px;
+      animation: qiu 3s infinite;
+
+    }
+
+    .qiu6 {
+      left: 30px;
+      animation: qiu 2s infinite;
+
+    }
+
+    .qiu7 {
+      left: -20px;
+      animation: qiu 3s infinite;
+
+    }
+
+    .qiu8 {
+      left: 18px;
+      animation: qiu 2s infinite;
+
+    }
+
+    .qiu9 {
+      left: 30px;
+      animation: qiu 2s infinite;
+
+    }
+
+    .qiu10 {
+      left: 20px;
+      animation: qiu 3s infinite;
+
+    }
+
+    .qiu11 {
+      left: -20px;
+      animation: qiu 1s infinite;
+    }
+
+    .qiu12 {
+      left: -10px;
+      animation: qiu 2s infinite;
+
+    }
+
+    .qiu13 {
+      left: 15px;
+      animation: qiu 2.5s infinite;
+
+    }
+
+    .qiu14 {
+      left: 25px;
+      animation: qiu 1s infinite;
+
+    }
+
+    .qiu15 {
+      left: -10px;
+      animation: qiu 2s infinite;
+
+    }
+
+    .qiu16 {
+      left: -30px;
+      animation: qiu 2s infinite;
+
+    }
+
+    .qiu17 {
+      left: 20px;
+      animation: qiu 2s infinite;
+
+    }
+
+    .qiu18 {
+      left: -18px;
+      animation: qiu 3s infinite;
+
+    }
+
+    .qiu19 {
+      left: -30px;
+      animation: qiu 2s infinite;
+
+    }
+
+    .qiu20 {
+      left: 20px;
+      animation: qiu 1.5s infinite;
+
+    }
+
+    @keyframes qiu {
+      from {
+        /* bottom: 0; */
+      }
+      to {
+        bottom: 100px;
+      }
+    }
+
+    .container {
+      float: left;
+      margin: 100px;
+      width: 800px;
+      height: 200px;
+      line-height: 200px;
+      position: relative;
+      filter: contrast(20);
+      background-color: black;
+      overflow: hidden;
+    }
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      color: yellow;
+      font-size: 40px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      animation: letterspacing 3s infinite alternate ease-in-out;
+      display: block;
+    }
+
+    @keyframes letterspacing {
+      0% {
+        letter-spacing: 10px;
+        filter: blur(0rem);
+      }
+
+      50% {
+        filter: blur(.3rem);
+      }
+
+      100% {
+        letter-spacing: -25px;
+        filter: blur(.5rem);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img class="img1" src="./123.jpg" alt="">
+  <img class="img2" src="./123.jpg" alt="">
+  <img class="img3" src="./123.jpg" alt="">
+  <img class="img4" src="./123.jpg" alt="">
+  <img class="img5" src="./123.jpg" alt="">
+  <img class="img6" src="./123.jpg" alt="">
+  <img class="img7" src="./123.jpg" alt="">
+  <img class="img8" src="./123.jpg" alt="">
+  <img class="img9" src="./123.jpg" alt="">
+  <img class="img10" src="./123.jpg" alt="">
+  <div class="wrap">
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+  </div>
+  <div class="fireWrap">
+    <div class="fire">
+      <div class="qiu qiu1"></div>
+      <div class="qiu qiu2"></div>
+      <div class="qiu qiu3"></div>
+      <div class="qiu qiu4"></div>
+      <div class="qiu qiu5"></div>
+      <div class="qiu qiu6"></div>
+      <div class="qiu qiu7"></div>
+      <div class="qiu qiu8"></div>
+      <div class="qiu qiu9"></div>
+      <div class="qiu qiu10"></div>
+      <div class="qiu qiu1"></div>
+      <div class="qiu qiu2"></div>
+      <div class="qiu qiu3"></div>
+      <div class="qiu qiu4"></div>
+      <div class="qiu qiu5"></div>
+      <div class="qiu qiu6"></div>
+      <div class="qiu qiu7"></div>
+      <div class="qiu qiu8"></div>
+      <div class="qiu qiu9"></div>
+      <div class="qiu qiu10"></div>
+    </div>
+  </div>
+  <div class="container">
+    <h1>Blur word Animation</h1>
+  </div>
+</body>
+
+</html>
